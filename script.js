@@ -21,4 +21,18 @@ function addBookToLibrary(){
 
     const book = new Book(name, author, pageLength, 5, read)
     myLibrary.push(book)
+    createLibrary(book)
+}
+
+function createLibrary(newItem){
+    let results = document.getElementById('library-wrapper')
+    results.append(
+        Object.assign(
+            document.createElement('p'),
+            {
+                classList:"bookNameDisplay", 
+                innerHTML: `${newItem.name} ${newItem.author}`
+            }
+            )
+        )
 }
