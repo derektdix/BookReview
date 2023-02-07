@@ -11,13 +11,13 @@
     <div class="form-wrapper">
         <form action="" class="form-container">
             <label for="book-name">Book Name</label>
-            <input type="text" placeholder="Book Name" data-id="bookName" name="book-name">
+            <input type="text" placeholder="Book Name" id="bookName" name="book-name">
             <label for="book-author">Author</label>
-            <input type="text" placeholder="Book Author" data-id="bookAuthor" name="book-author">
+            <input type="text" placeholder="Book Author" id="bookAuthor" name="book-author">
             <label for="book-length">Page Count</label>
-            <input type="number" placeholder="Book Length" data-id="bookPageLength" name="book-length">
+            <input type="number" placeholder="Book Length" id="bookPageLength" name="book-length">
             <label for="book-read">Read?</label>
-            <input type="checkbox" placeholder="Book Read" data-id="bookRead" name="book-read">
+            <input type="checkbox" placeholder="Book Read" id="bookRead" name="book-read">
             <label class="rating-label"> Rating
                 <input
                 class="rating"
@@ -27,8 +27,12 @@
                 type="range"
                 value="1">
             </label>
-            <button>Submit</button>
+            <button id="bookSubmit" class="book-submit" type="button">Submit</button>
         </form>
+    </div>
+
+    <div id="library-wrapper">
+
     </div>
 
     <script src="script.js"></script>
