@@ -11,13 +11,13 @@
     <div class="form-wrapper">
         <form action="" class="form-container">
             <label for="book-name">Book Name</label>
-            <input type="text" placeholder="Book Name" id="bookName" name="book-name">
+            <input type="text" placeholder="Book Name" id="bookName" name="book-name" required>
             <label for="book-author">Author</label>
-            <input type="text" placeholder="Book Author" id="bookAuthor" name="book-author">
+            <input type="text" placeholder="Book Author" id="bookAuthor" name="book-author" required>
             <label for="book-length">Page Count</label>
-            <input type="number" placeholder="Book Length" id="bookPageLength" name="book-length">
+            <input type="number" placeholder="Book Length" id="bookPageLength" name="book-length" required>
             <label for="book-read">Read?</label>
-            <input type="checkbox" placeholder="Book Read" id="bookRead" name="book-read">
+            <input type="checkbox" placeholder="Book Read" id="bookRead" name="book-read"> 
             <label class="rating-label"> Rating
                 <input
                 class="rating"
@@ -25,7 +25,9 @@
                 oninput="this.style.setProperty('--value', this.value)"
                 step="0.5"
                 type="range"
-                value="1">
+                value="1"
+                id="rating-label-stars"
+                required>
             </label>
             <button id="bookSubmit" class="book-submit" type="button">Submit</button>
         </form>

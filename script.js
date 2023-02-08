@@ -16,23 +16,28 @@ function addBookToLibrary(){
     let name = document.getElementById('bookName').value
     let author = document.getElementById('bookAuthor').value
     let pageLength = Number(document.getElementById('bookPageLength').value)
-    let read = document.getElementById('bookRead').value
-
-
-    const book = new Book(name, author, pageLength, 5, read)
+    let read = document.getElementById('bookRead').checked
+    let rating = document.getElementById('rating-label-stars').value
+    
+    const book = new Book(name, author, pageLength, rating, read)
     myLibrary.push(book)
     createLibrary(book)
 }
 
 function createLibrary(newItem){
     let results = document.getElementById('library-wrapper')
-    results.append(
-        Object.assign(
-            document.createElement('p'),
-            {
-                classList:"bookNameDisplay", 
-                innerHTML: `${newItem.name} ${newItem.author}`
-            }
-            )
-        )
+    let div = document.createElement('div')
+    div.className = "book-card"
+    let final = results.appendChild(div)
+
+
+    final.append(`Book Title: ${newItem.name}`)
+    final.appendChild(document.createElement('br'));
+    final.append(`Book Author: ${newItem.author}`)
+    final.appendChild(document.createElement('br'));
+    final.append(`Book Length: ${newItem.pageLength}`)
+    final.appendChild(document.createElement('br'));
+    final.append(`Your Rating: ${newItem.rating}`)
+    final.appendChild(document.createElement('br'));
+    final.append(`Have you Finished: ${newItem.read}`)
 }

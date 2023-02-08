@@ -31,6 +31,20 @@ label{
   padding-top: 20px;
 }
 
+#library-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.book-card{
+  padding: 10px 0;
+}
+
+
+
 
 
 
